@@ -141,7 +141,9 @@ h1 span:nth-child(3){animation-delay:.24s}
 .card{background:var(--bg2);border:1px solid var(--bd);border-radius:20px;overflow:hidden;transition:transform .35s,box-shadow .35s;animation:pop .5s both}
 @keyframes pop{from{opacity:0;transform:scale(.94)}}
 .card:hover{transform:translateY(-8px);box-shadow:0 22px 40px -22px var(--ac)}
-.thumb{height:170px;display:grid;place-items:center;font:800 2.6rem var(--hd);color:#fff;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--ac),var(--ac2))}
+.thumb{aspect-ratio:16/9;display:grid;place-items:center;font:800 2.6rem var(--hd);color:#fff;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--ac),var(--ac2))}
+.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .5s}
+.card:hover .thumb img{transform:scale(1.08)}
 .card:nth-child(2) .thumb{background:linear-gradient(135deg,var(--ac2),var(--ac));}
 .card:nth-child(3) .thumb{background:linear-gradient(200deg,var(--ac),#111a3d)}
 .card:nth-child(4) .thumb{background:linear-gradient(45deg,var(--ac2),#111a3d)}
